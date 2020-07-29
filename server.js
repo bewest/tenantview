@@ -64,8 +64,8 @@ function createServer (opts) {
   function set_outgoing_headers (req, res, next) {
     res.header('X-Worker-Port', req.result.port || "1234");
     // res.header('X-Accel-Redirect', ['@proxy', req.result.port, '1'].join('/'));
-    res.header('Not-Accel-Redirect', '@app');
-    res.header('X-Selected-Backend', req.result.name);
+    // res.header('Not-Accel-Redirect', '@app');
+    res.header('X-Selected-Backend', req.result.internal_name);
     console.log("outgoing headers", res.getHeaders( ));
     next( );
   }
