@@ -52,12 +52,12 @@ function createServer (opts) {
     var domain = req.site_domain;
     console.log('resolve port for domain', domain);
     dns.resolveSrv(domain, function (err, result) {
-      console.log('resolved', domain, result);
-      if (result.length) {
+      console.log('resolved', err, domain, result);
+      if (!err && result && result.length) {
         req.result.port = result[0].port;
         req.result.name = result[0].name;
       }
-      next( );
+      next(err);
     });
   }
 
