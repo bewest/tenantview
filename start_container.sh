@@ -16,5 +16,5 @@ service nginx restart
 
 # clean things
 
-INTERNAL_PORT=$REDIRECTOR_PORT node redirector-server.js
+INTERNAL_PORT=$REDIRECTOR_PORT node server.js
 
