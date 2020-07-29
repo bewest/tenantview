@@ -66,7 +66,7 @@ function createServer (opts) {
     // res.header('X-Accel-Redirect', ['@proxy', req.result.port, '1'].join('/'));
     res.header('Not-Accel-Redirect', '@app');
     res.header('X-Selected-Backend', req.result.name);
-    console.log("outgoing headers", res.headers);
+    console.log("outgoing headers", res.getHeaders( ));
     next( );
   }
   function select_backend (req, res, next) {
