@@ -1,0 +1,15 @@
+{
+  "name": "tenantview",
+  "version": "0.0.1",
+  "description": "Resolve tenant resources in nginx via consul service description.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Ben West",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "restify": "^8.5.1"
+  }
+}
